@@ -1,0 +1,16 @@
+.create-button {
+  padding: 1.6rem;
+  background-color: var(--blue-dark);
+  border-radius: 8px;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: color 0.2s;
+}
+
+.create-button:hover {
+  background-color: var(--blue);
+}
