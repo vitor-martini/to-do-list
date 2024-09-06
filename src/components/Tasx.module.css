@@ -1,0 +1,10 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.done {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}

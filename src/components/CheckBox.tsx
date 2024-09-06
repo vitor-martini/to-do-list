@@ -1,9 +1,16 @@
 import styles from './CheckBox.module.css';
 
-export function CheckBox() {
+interface CheckBoxProps {
+  check: boolean;
+}
+
+export function CheckBox({ check }: CheckBoxProps) {
   return (
     <label className={styles.checkbox}>
-        <input type="checkbox" />
+        <input 
+          type="checkbox" 
+          checked={check}
+        />
         <span className={styles['custom-checkbox']}></span>
     </label>
   );
