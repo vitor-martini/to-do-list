@@ -1,0 +1,10 @@
+.delete-button {
+  line-height: 0;
+  background-color: transparent;
+  color: var(--gray-100);
+  padding: 0.4rem;
+}
+
+.delete-button:hover {
+  color: var(--danger);
+ }
