@@ -5,17 +5,28 @@ import logo from './assets/rocket.svg';
 import styles from './App.module.css';
 import './global.css';
 import { useState } from 'react';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import { ClipboardText } from 'phosphor-react';
+import 'react-toastify/dist/ReactToastify.css';
 
 export function App() {
   const [tasks, setTasks] = useState<TaskType[]>([]);
   const [newTask, setNewTask] = useState<string>('');
 
+  function getCssVariableValue(variable: string) {
+    return getComputedStyle(document.documentElement).getPropertyValue(variable);
+  }
+
   function handleAddNewTask() {
     if(newTask.length === 0) {
-      toast.error('Informe a nova tarefa!');
+      toast.error('Informe o conteúdo da tarefa!', {
+        style: {
+          backgroundColor: getCssVariableValue('--gray-600'), 
+          color: getCssVariableValue('--gray-100') 
+        }
+      });
+      
       return;
     }
 
@@ -97,6 +108,7 @@ export function App() {
           }
         </div>
       </main>
+      <ToastContainer />
     </div>
   );
 }
