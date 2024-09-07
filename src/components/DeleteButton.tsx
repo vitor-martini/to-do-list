@@ -8,7 +8,7 @@ export function DeleteButton({...props}: ButtonHTMLAttributes<HTMLButtonElement>
       className={styles['delete-button']}
       {...props}
     >
-      <Trash size={32} />
+      <Trash size={24} />
     </button>
   );
 }

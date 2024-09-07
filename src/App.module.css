@@ -1,0 +1,94 @@
+.header {
+  background-color: var(--gray-700);
+  height: 20rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+
+  > h1 {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  > h1 > span {
+    color: var(--blue);
+  }
+
+  > h1 > span:last-child {
+    color: var(--purple-dark);
+  }
+}
+
+.main {
+  max-width: 740px;
+  margin: 0 auto;
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  margin: -2.8rem auto 6.4rem;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+
+  > span {
+    padding: 0.2rem 0.8rem;
+    background-color: var(--gray-400);
+    border-radius: 999px;
+  }
+}
+
+.created { 
+  color: var(--blue);
+}
+
+.done {
+  color: var(--purple);
+}
+
+.tasks {
+  margin-top: 2.4rem;
+  padding-top: 6.4rem;
+  border-top: 1px solid var(--gray-400);
+}
+
+.empty {  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-300);
+
+  > svg {
+    margin-bottom: 1.6rem;
+  }
+
+  > p:first-of-type {
+    font-weight: bold;
+  }
+}
+
+.fill {  
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  max-height: calc(100vh - 476px);
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}

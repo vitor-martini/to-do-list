@@ -2,4 +2,6 @@
   padding: 1.6rem;
   background-color: var(--gray-500);
   border-radius: 8px;
+  width: 100%;
+  border: 1px solid var(--gray-700);
 }

@@ -2,26 +2,30 @@ import { CheckBox } from './CheckBox';
 import { DeleteButton } from './DeleteButton';
 import styles from './Tasx.module.css';
 
-interface TaskProps {
+export interface TaskType { 
   id: string;
   content: string;
   done: boolean;
 }
 
-export function Task({ id, content, done }: TaskProps) {
+interface TaskProps {
+  task: TaskType,
+  onDoTask: (task: TaskType) => void;
+  onDeleteTask: (id: string) => void;
+}
 
-  function handleDelete(id: string) {
-    console.log(`deleting id ${id}`);
-  }
-
+export function Task({ task, onDoTask, onDeleteTask }: TaskProps) {
   return (
     <div className={styles.task}>
-      <CheckBox check={done}/>
+      <CheckBox 
+        check={task.done}
+        onChange={() => onDoTask(task)}
+      />
       <p
-        className={done ? styles.done : ''}
-      >{content}</p>
+        className={task.done ? styles.done : ''}
+      >{task.content}</p>
       <DeleteButton
-        onClick={() => handleDelete(id)}
+        onClick={() => onDeleteTask(task.id)}
       />
     </div>
   );
