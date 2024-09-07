@@ -1,5 +1,6 @@
 # To-Do List Application 
-This project is a **To-Do List application**  developed using **React** , **TypeScript** , and **Vite** . The project is part of my learning journey in **Rocketseat's Ignite course** , where I'm expanding my skills in modern web development technologies. Although I started with a ready-made layout, I coded everything by myself, focusing on improving my knowledge of **TypeScript** .
+This project is a **To-Do List application**  developed using **React**, **TypeScript**, and **Vite**. The project is part of my learning journey in **Rocketseat's Ignite course**, where I'm expanding my skills in modern web development technologies. Although I started with a ready-made layout, I coded everything by myself, focusing on improving my knowledge of **TypeScript**.
+
 ## Features 
 
 - Add new tasks to the list.
